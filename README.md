@@ -17,11 +17,22 @@ These three steps:
  * Activate the virtualenv. After you do this, everytime you run 'pip', you will install Python packages only into the virtual environment. Every time you run 'python', a special version of python will run, which sees only the packages installed in the virtual environment.
  * Install all the packages in the file called 'requirements.txt'.
 
-If virtualenv doesn't work for you, try just doing the third line:
+To test that everything is working, type `python` on the command line, and then in the python terminal, do 
 
 ```
-pip install -r requirements.txt
+Python 2.7.3 (default, Jun 22 2015, 19:33:41) 
+[GCC 4.6.3] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import requests
 ```
 
-This will install the requirements globally. There could be conflicts with other packages you have installed! But we are not expecting to have any outlandish requirements, so you should probably be ok.
+If you don't get an error message, you are good to go. If you do, look at the troubleshooting section.
+
+Useful Resources
+----------------
+
+ * The Requests HTTP library: http://docs.python-requests.org/en/latest/
+ * The 'Roll the Dice' API: http://rollthedice.setgetgo.com/
+ * The ProgrammableWeb directory of public APIs, where the above was found: http://www.programmableweb.com/apis/directory	
+
 
