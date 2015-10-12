@@ -49,5 +49,16 @@ The value of `l` is output. This is the empty list, exactly what we wrote when w
 ... 
 ```
 
-If you type the first line above into the Python REPL, it will detect that there are more lines comming, and the following lines will start with `...` until you press Enter twice to complete the piece of code.
+If you type the first line above into the Python REPL, it will detect that there are more lines coming, and the following lines will start with `...` until you press Enter twice to complete the piece of code.
+
+The function `range` returns a list of integers:
+
+```
+>>> range(5)
+[1, 2, 3, 4, 5]
+```
+
+We are looping over this list, with the variable `i` being set to each value in the list in turn. In this loop, we don't use `i` anywhere, so we just do the same thing five times.
+
+
 
