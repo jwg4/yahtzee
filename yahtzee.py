@@ -1,6 +1,7 @@
 import requests
 
 def get_dice_rolls():
+    """ Rolls a 6-sided dice 5 times, using the API, and returns the result """
     l = []
 
     for i in range(5):
