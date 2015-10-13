@@ -72,7 +72,7 @@ u'{"source":"Canadian Bitcoin Index History","source_link":"https:\\/\\/www.cbix
 {u'source': u'Canadian Bitcoin Index History', u'methods': {u'index': u'http://api.cbix.ca/v1/index', u'convert': u'http://api.cbix.ca/v1/convert', u'sentiment': u'http://api.cbix.ca/v1/sentiment', u'analysis': u'http://api.cbix.ca/v1/analysis', u'summary': u'http://api.cbix.ca/v1/summary', u'notifications': u'http://api.cbix.ca/v1/notifications', u'orderbook': u'http://api.cbix.ca/v1/orderbook', u'news': u'http://api.cbix.ca/v1/news', u'volatility': u'http://api.cbix.ca/v1/volatility', u'history': u'http://api.cbix.ca/v1/history'}, u'success': True, u'source_link': u'https://www.cbix.ca'}
 ```
 
-`r` is an object of type `requests.Response`. Note that displaying `r` shows us that the status code was 200. `r.text` gives us the text of the response as a string. `r.json()` unpacks the JSON into a Python dict.
+`r` is an object of type `requests.Response`. Note that displaying `r` shows us that the status code was 200. `r.text` gives us the text of the response as a string. `r.json()` unpacks the JSON into a Python dict. If the text of the response isn't in JSON format, you would get an error here.
 
 Now, each time we run the loop, the response text consists only of a single-character - the digit from 1 to 6. Each time we add the character to the list `l` using the method `l.append()`. At the end, `l` should look like this:
 
