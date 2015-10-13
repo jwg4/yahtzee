@@ -60,5 +60,41 @@ The function `range` returns a list of integers:
 
 We are looping over this list, with the variable `i` being set to each value in the list in turn. In this loop, we don't use `i` anywhere, so we just do the same thing five times.
 
+The function `requests.get` does a GET request of the URL. The requests library is very simple and intuitive and the first page of the docs at http://docs.python-requests.org/en/latest/ explains the most common ways to use it. We assign to the variable `r` the result of the GET.
 
+```
+>>> r = requests.get('https://www.cbix.ca/api/v1')
+>>> r
+<Response [200]>
+>>> r.text
+u'{"source":"Canadian Bitcoin Index History","source_link":"https:\\/\\/www.cbix.ca","success":true,"methods":{"index":"http:\\/\\/api.cbix.ca\\/v1\\/index","history":"http:\\/\\/api.cbix.ca\\/v1\\/history","convert":"http:\\/\\/api.cbix.ca\\/v1\\/convert","orderbook":"http:\\/\\/api.cbix.ca\\/v1\\/orderbook","summary":"http:\\/\\/api.cbix.ca\\/v1\\/summary","news":"http:\\/\\/api.cbix.ca\\/v1\\/news","notifications":"http:\\/\\/api.cbix.ca\\/v1\\/notifications","analysis":"http:\\/\\/api.cbix.ca\\/v1\\/analysis","sentiment":"http:\\/\\/api.cbix.ca\\/v1\\/sentiment","volatility":"http:\\/\\/api.cbix.ca\\/v1\\/volatility"}}'
+>>> r.json()
+{u'source': u'Canadian Bitcoin Index History', u'methods': {u'index': u'http://api.cbix.ca/v1/index', u'convert': u'http://api.cbix.ca/v1/convert', u'sentiment': u'http://api.cbix.ca/v1/sentiment', u'analysis': u'http://api.cbix.ca/v1/analysis', u'summary': u'http://api.cbix.ca/v1/summary', u'notifications': u'http://api.cbix.ca/v1/notifications', u'orderbook': u'http://api.cbix.ca/v1/orderbook', u'news': u'http://api.cbix.ca/v1/news', u'volatility': u'http://api.cbix.ca/v1/volatility', u'history': u'http://api.cbix.ca/v1/history'}, u'success': True, u'source_link': u'https://www.cbix.ca'}
+```
+
+`r` is an object of type `requests.Response`. Note that displaying `r` shows us that the status code was 200. `r.text` gives us the text of the response as a string. `r.json()` unpacks the JSON into a Python dict.
+
+Now, each time we run the loop, the response text consists only of a single-character - the digit from 1 to 6. Each time we add the character to the list `l` using the method `l.append()`. At the end, `l` should look like this:
+
+```
+>>> l
+[u'5', u'5', u'1', u'1', u'2']
+```
+
+This is a list of strings, not numbers. The `u` before the quotes means that the strings are Unicode, although this doesn't matter much to us at the moment.
+
+The last thing we do is print out the list of dice values. We use `join`, which is a member method of the string class. Given a string `s`, `s.join(l)`, where l is a list (or something similar to a list), returns the string made by joining all the elements of `l` with one copy of `s` between each pair.
+
+```
+>>> "_".join(['a', 'b', 'c'])
+'a_b_c'
+>>> "foo".join(['hello', 'world', '!'])
+'hellofooworldfoo!'
+>>> "".join(['hello', 'world', '!'])
+'helloworld!'
+>>> " ".join(l)
+u'5 5 1 1 2'
+```
+
+`print` of course prints out the resulting string. We don't need print in the REPL, where the last expression automatically gets printed out, but we do in a script.
 
