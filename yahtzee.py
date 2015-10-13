@@ -11,4 +11,4 @@ def get_dice_rolls():
     return l
 
 result = get_dice_rolls()
-print " ".join(result)
+print ", ".join(result)
