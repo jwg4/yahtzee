@@ -5,7 +5,7 @@ File: https://github.com/jwg4/yahtzee/blob/74d73398bb9b6ff81704b7aa88af0e894cb4c
 
 This is a very basic version of the game yahtzee, in which 5 dice are rolled. The code uses a Web API to retrieve random values for the dice. (Of course, Python could generate the numbers itself. But I wanted to make the code a little more interesting.) The program gets a random value 5 times, and then prints out the 5 values.
 
-To get started, make sure you can run the program:
+To get started, do the stuff in README.md which gets you set up with Python. Make sure you can run the program:
 ```
 python yahtzee.py
 4 4 5 1 6
