@@ -1,4 +1,4 @@
-Stage 1
+Stage 1 - Running a basic program
 =======
 Commit: 74d73398bb9b6ff81704b7aa88af0e894cb4c7f1
 File: https://github.com/jwg4/yahtzee/blob/74d73398bb9b6ff81704b7aa88af0e894cb4c7f1/yahtzee.py
