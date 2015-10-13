@@ -60,6 +60,15 @@ The function `range` returns a list of integers:
 
 We are looping over this list, with the variable `i` being set to each value in the list in turn. In this loop, we don't use `i` anywhere, so we just do the same thing five times.
 
+For many people the trickiest part about Python is the formatting of 'code blocks' like loops or if statements. It's actually quite easy, but different to how many other languages work. Starting from the beginning of a file, all code lines start at the beginning of the line, with no spaces in front of them. When we have a 'block' of code, like in the for loop, this block has to be indented by some number of spaces. All the code which is indented by the same amount, will be part of that block. When the block finishes, we go back to not having any spaces as the start of lines.
+
+  * You can indent a block by any number of spaces, as long as it's the same for all lines of the block. Almost all Python code uses 4 spaces though, and you should use 4.
+  * Don't use tabs, as it's hard to know exactly how many spaces oen tab will be equal to. If you can get your editor to insert 4 spaces when you press tab once, great. Otherwise, press the space bar 4 times.
+  * You can have as many blank lines, or lines with only some spaces on them, as you want without affecting your program. Usually one or two blank lines are used to separate out different parts of the code.
+  * Nested blocks of code have 8, then 12, etc. spaces at the start of the line. We will see later exactly what these look like.
+
+Here all we need to know is that the two lines which start with spaces are part of the loop. Everything which comes later is not.
+
 The function `requests.get` does a GET request of the URL. The requests library is very simple and intuitive and the first page of the docs at http://docs.python-requests.org/en/latest/ explains the most common ways to use it. We assign to the variable `r` the result of the GET.
 
 ```
