@@ -9,3 +9,21 @@ If the keyword `return` appears somewhere in the code, followed by an expression
 
 Here we define the list `l` as before, append the results of calling the dice roll API five times, and then return `l`. Note that the `for` loop is a now a doubly-indented block - because it's a block within a block.
 
+The 'return value' of the function is the value of the expression which calls the function. In other words, 
+
+```
+result = get_dice_rolls()
+```
+
+runs the function get_dice_rolls, and stores the return value in the variable `result`. If we just had the line 
+
+```
+get_dice_rolls()
+```
+
+this would mean that the function got called, but that the return value was ignored. This could be useful if the function `get_dice_rolls` had some side-effect, such as printing something to the screen.
+
+
+
+
+
