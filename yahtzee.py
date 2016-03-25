@@ -12,5 +12,10 @@ def get_dice_rolls():
     return l
 
 
-result = get_dice_rolls()
-print ", ".join(result)
+def display_dice(values):
+    print ", ".join(values)
+
+
+if __name__ == '__main__':
+    result = get_dice_rolls()
+    display_dice(result)
